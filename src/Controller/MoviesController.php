@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class MoviesController extends AbstractController
 {
-    #[Route('/movies', name: 'app_movies')]
+    #[Route('/movies', name: 'movies_router')]
     public function index(): Response
     {
         return $this->json([
@@ -16,4 +16,13 @@ class MoviesController extends AbstractController
             'path' => 'src/Controller/MoviesController.php',
         ]);
     }
+
+    #[Route('/movies/{name}', name: 'movie_router')]
+    public function list(): Response
+    {
+        return $this->json([
+            'message' => 'Movie Controller!',
+            'path' => 'src/Controller/MoviesController.php',
+        ]);
+    }    
 }
