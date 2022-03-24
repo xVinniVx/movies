@@ -17,12 +17,12 @@ class MoviesController extends AbstractController
         ]);
     }
 
-    #[Route('/movies/{name}', name: 'movie_router')]
-    public function list(): Response
+    #[Route('/movies/{name}', name: 'movie_router', methods: ['GET', 'HEAD'])]
+    public function list(string $name): Response
     {
         return $this->json([
-            'message' => 'Movie Controller!',
+            'message' => $name . ' Movie Controller!',
             'path' => 'src/Controller/MoviesController.php',
         ]);
-    }    
+    }
 }
