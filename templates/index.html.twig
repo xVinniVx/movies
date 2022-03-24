@@ -1,3 +1,11 @@
 <h1>
 	Witaj świecie
 </h1>
+{% if title is defined %}
+	<p>
+		Szukasz:
+		{{ title }}
+
+		{{ dump(title) }}
+	</p>
+{% endif %}
