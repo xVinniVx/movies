@@ -17,7 +17,7 @@ class MoviesController extends AbstractController
         ]);
     }
 
-    #[Route('/movies/{name}', name: 'movie_router', methods: ['GET', 'HEAD'])]
+    #[Route('/movies/{name}', name: 'movie_router', defaults: ['name' => null], methods: ['GET', 'HEAD'])]
     public function list(string $name): Response
     {
         return $this->json([
