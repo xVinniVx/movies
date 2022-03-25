@@ -11,7 +11,11 @@ class MoviesController extends AbstractController
     #[Route('/movies', name: 'movies_router')]
     public function index(): Response
     {
-        return $this->render('index.html.twig');
+        $movies = ["Batman", "Spider Man", "Inception", "Scream"];
+        return $this->render('movies.html.twig', [
+            "title" => 'Lista filmów',
+            "movies" => $movies
+        ]);
     }
 
     #[Route('/movies/{name}', name: 'movie_router', defaults: ['name' => null], methods: ['GET', 'HEAD'])]
