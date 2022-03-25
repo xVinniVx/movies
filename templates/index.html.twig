@@ -1,11 +1,10 @@
-<h1>
-	Witaj świecie
-</h1>
-{% if title is defined %}
-	<p>
-		Szukasz:
-		{{ title }}
+{% extends "base.html.twig" %}
 
-		{{ dump(title) }}
+{% block title %}
+	{{ title }}
+{% endblock %}
+
+{% block body %}
+	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt consequuntur, est officiis suscipit consequatur, consectetur ducimus velit voluptate reiciendis laboriosam repellendus tempore perspiciatis odio ullam provident sunt autem! Esse, nostrum!
 	</p>
-{% endif %}
+{% endblock %}
