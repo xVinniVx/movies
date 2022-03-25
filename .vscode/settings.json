@@ -1,0 +1,17 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "s109.linuxpl.com",
+            "port": 3306,
+            "driver": "MariaDB",
+            "name": "Symfony Vinniv2",
+            "database": "vinniv2_symfony",
+            "username": "vinniv2_symfony",
+            "password": "3Dad*OXYvE%-4lz-"
+        }
+    ]
+}
